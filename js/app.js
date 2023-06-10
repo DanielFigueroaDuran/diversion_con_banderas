@@ -1,23 +1,30 @@
 // ---------------------------Creating Api Countries ----------------------------
 
-const section = document.querySelector(".container");
+const container = document.querySelector(".container");
 
-const countriesUrl = " https://restcountries.com/v3.1/all";
+const countriesUrl = " https://restcountries.com/v3.1/all/";
 
 const getData = async () => {
   try {
     const response = await fetch(countriesUrl);
     const dataCountries = await response.json();
-    //console.log(dataCountries[1].flags);
-
-    const promises = dataCountries.map(async (element) => {
-      const resCountries = await fetch(element.url);
-      const countriesData = await resCountries.json();
-      console.log(countriesData);
-      // return;
+    console.log(dataCountries);
+    dataCountries.forEach((element) => {
+      //console.log(element.flags.png);
+      container.innerHTML += ` 
+      
+              <div class="card">
+                  <img class="bandera" src="${element.flags.png}" alt="" />
+                  <article>
+                      <p>${element.name.common}</p>
+                      <p>Población: ${element.population}</p>
+                      <p>Regíon: ${element.continents}</p>
+                      <p>Capital: ${element.capital}</p>
+                  </article>
+                 
+              </div>
+        `;
     });
-
-    //const result = await PromiseAll(promises);
   } catch (error) {
     console.log("Error");
   }
