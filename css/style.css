@@ -4,22 +4,56 @@
   font-size: 14px;
 }
 
+/* codigo de cambio de color */
+
+.dark, h1, header{
+  background: rgb(4, 24, 27);
+  color: white;
+}  
+
+.icon{
+  background-image: url(../assets/img/energia-solar.png);
+}
+
+.inp,
+.selected {
+  background: rgb(73, 72, 72);
+  border-radius: 3px;
+  padding: 10px;
+  border: 1px solid rgb(224, 224, 249);
+  color: white;
+}
+
+.card{
+  box-shadow: 0 0 20px rgb(239, 238, 243);
+}
+
+
+
+/* codigo de banderas */
+
+
 main {
   display: flex;
   flex-direction: column;
 }
 
 header {
-  background: rgb(236, 247, 247);
+  background: rgb(236, 247, 247); 
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 30px;
+  color: black;
 }
 
 header img {
   width: 20px;
   height: 20px;
+}
+
+.icon{
+  cursor: pointer;
 }
 
 nav {
@@ -32,6 +66,10 @@ select {
   border-radius: 3px;
   padding: 10px;
   border: 1px solid rgb(224, 224, 249);
+}
+
+select option{
+  background: black;
 }
 
 input:hover {
@@ -70,7 +108,7 @@ section {
   justify-content: space-between;
   gap: 20px;
   border: 1px solid rgb(224, 224, 249);
-  box-shadow: 0 0 20px rgba(44, 8, 246, 0.2);
+  /* box-shadow: 0 0 20px rgba(44, 8, 246, 0.2); */
   border-radius: 6px;
   padding: 10px;
 }
