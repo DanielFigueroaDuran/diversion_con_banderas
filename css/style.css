@@ -59,14 +59,18 @@ section {
 }
 
 .bandera {
+  border: 1px solid black;
   width: 150px;
 }
 
 .card {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   gap: 20px;
   border: 1px solid rgb(224, 224, 249);
+  box-shadow: 0 0 20px rgba(44, 8, 246, 0.2);
   border-radius: 6px;
   padding: 10px;
 }
@@ -75,4 +79,24 @@ article {
   display: flex;
   flex-direction: column;
   gap: 6px;
+}
+
+.btn {
+  display: flex;
+
+  text-decoration: none;
+}
+
+button {
+  align-content: flex-end;
+  width: 100px;
+  box-shadow: 0 0 20px rgba(108, 162, 237, 0.6);
+  border-radius: 20px;
+  border: none;
+  padding: 10px;
+  color: rgb(100, 78, 241);
+}
+
+button:hover {
+  background-color: #fd0e06;
 }
