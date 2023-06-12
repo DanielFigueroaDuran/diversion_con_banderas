@@ -16,12 +16,11 @@ const getData = async () => {
   try {
     const response = await fetch(countriesUrl);
     const dataCountries = await response.json();
-    //console.log(dataCountries);
+    
     
     
     dataCountries.forEach((element) => {
-      //console.log(element.flags.png);
-      //console.log(element);
+      
       container.innerHTML += ` 
       
               <div class="card">
@@ -34,7 +33,7 @@ const getData = async () => {
                       <p>Capital: ${element.capital}</p>
                   </article>
                     <div class="btn">
-                        <a href="./pages/countries.html?name=${element.name.common}"><button type="button">Más</button></a>
+                        <a href="./pages/countries.html?name=${element.name.common}"><button type="button">More</button></a>
                     </div> 
                     
               </div>

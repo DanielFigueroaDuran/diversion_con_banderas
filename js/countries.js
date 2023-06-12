@@ -10,14 +10,7 @@ const getData = async () => {
   try {
     const response = await fetch(countriesUrl);
     const dataCountries = await response.json();
-    console.log(dataCountries);
-    console.log(dataCountries[0].languages);
-    console.log(dataCountries[0].name.common);
-
-    
-    
-    //console.log(dataCountries[0].currencies);
-    
+       
     dataCountries.forEach((element,i) => {
       const currencies = Object.keys(element.currencies);
       const languages = Object.values(element.languages);
